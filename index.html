@@ -1,0 +1,465 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Coursify</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" type="text/css" href="css/style.css">
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" 
+        integrity="sha512-SfTiTlX6kk+qitfevl/7LibUOeJWlt9rbyDn92a1DqWOw9vWG2MFoays0sgObmWazO5BQPiFucnnEAjpAB+/Sw==" crossorigin="anonymous" />
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+       
+  
+    </head>
+    <body>
+        <div class="header" id="topheader">
+            <nav class="navbar navbar-expand-lg fixed-top">
+              <div class="container text-uppercase p-2">
+
+              
+                <a class="navbar-brand font-weight-bold text-white" href="#">Coursify</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                  <span class="navbar-toggler-icon"></span>
+                </button>
+              
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+               
+                  <ul class="navbar-nav ml-auto text-uppercase">
+                    <li class="nav-item active">
+                      <a class="nav-link" href="#">Live Classes <span class="sr-only">(current)</span></a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Video Library</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Course</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Book</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Board</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link" href="#">Exam</a>
+                    </li>
+                    
+                  </ul>
+                </div>
+                </div>
+              </nav>
+
+              <section class="header-section">
+                <div class="center-div">
+                  <h1 class="font-weight-bold">
+                    Clarify your doubts in your language.</h1><br>
+                    <section>
+                    <div class="header-buttons">
+                      <button onclick="document.getElementById('id02').style.display='block'" style="width:auto;">Ask your doubts</button>
+                      <link href="css\doubt.css" rel="stylesheet">
+                    </div>
+                    <div id="id02" class="model">
+                      <form action="doubt.py" class="model-content" method="POST">
+                        <div class="imgcontainer">
+                          <span onclick="document.getElementById('id01').style.display='none'" class="close" title='close model'>&times;</span>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="fname">First Name</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="lname">Last Name</label>
+                          </div>
+                          <div class="col-75">
+                            <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="country">Subject</label>
+                          </div>
+                          <div class="col-75">
+                            <select id="subject" name="subject">
+                              <option value="Mathematics">Mathematics</option>
+                              <option value="Physics">Physics</option>
+                              <option value="Chemistry">Chemistry</option>
+                              <option value="Biology">Biology</option>
+                            </select>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <div class="col-25">
+                            <label for="subject">Ask your doubt:</label>
+                          </div>
+                          <div class="col-75">
+                            <textarea id="doubt" name="doubt" placeholder="Write something.." style="height:200px"></textarea>
+                          </div>
+                        </div>
+                        <div class="row">
+                          <input type="submit" value="Submit">
+                        </div>
+                      </form>
+                      <script>
+                        var model=document.getElementById('id02');
+                        window.onclick=function(event){
+                            if(event.target==model){
+                                model.style.display="none";
+                            }
+                        }
+                    </script>
+                    </div>
+                    </section>
+                    <br>
+                    <br>
+                    <div class="header-buttons">
+                      <button onclick="document.getElementById('id01').style.display='block'" style="width:auto;">Login</button>
+                      <link href="css\login.css" rel="stylesheet">
+                    </div>
+                    <div id="id01" class="model">
+                      <form class="model-content " action="login.py" method="post">
+                          <div class="imgcontainer">
+                              <span onclick="document.getElementById('id01').style.display='none'" class="close" title='close model'>&times;</span>
+                              <img src='avatar.png' alt="avatar" class="avatar">
+                          </div>
+                          <div class="container">
+                              <label for="username"><b>Username</b></label>
+                              <input type="text" placeholder="Enter Username" name="username" required>
+                              <label for="password"><b>Password</b></label>
+                              <input type=
+                              "password" placeholder="Enter password" name="password" required>
+                              <button type="submit">Login</button>
+                              <label>
+                                  <input type="checkbox" checked="checked" name="rember">Remember Me
+                              </label>
+                          </div>
+                          <div class="container" style="background-color:white">
+                          <button onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+                          <span class="passsword">Forgot <a href="#">password?</a></span>
+                          
+                      </div>
+                      </form>
+                      
+                  </div>
+                  <script>
+                      var model=document.getElementById('id01');
+                      window.onclick=function(event){
+                          if(event.target==model){
+                              model.style.display="none";
+                          }
+                      }
+                  </script>
+                    <br>
+                    <br>
+                    <div class="header-buttons">
+                      <a href="#">Sign up</a>
+                    </div>
+                </div>
+              </section>
+        </div>
+<!--*****************************************************************************************************************************-->
+<!--*******************************Three extra divs start****************************************************************-->
+<section class="header-extradiv">
+  <div class="container">
+    <div class="row">
+      <div class="extra-div col-lg-4 col-md-4 col-12">
+        <a href="#"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+        <h2>1,000,000+</h2>
+        <p>Video Lectures</p>
+
+      </div>
+      <div class="extra-div col-lg-4 col-md-4 col-12">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>40,000+</h2>
+        <p>Double Checked</p>
+
+      </div>
+      <div class="extra-div col-lg-4 col-md-4 col-12">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>30,000+</h2>
+        <p>Books Covered</p>
+
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<!--*********************************Three extra divs end************************************************************************-->
+<!--*********************************how it works starts************************************************************************-->
+<section class="header-extradiv">
+  <h1>How it works?</h1><br>
+  <div class="container">
+    <div class="row">
+      <div class="extra-div col-lg-4 col-md-4 col-12">
+        <a href="#"><i class="fa-3x fa fa-question" aria-hidden="true"></i></a>
+        <h2>Have a doubt    >></h2>
+      </div>
+      <div class="extra-div col-lg-4 col-md-4 col-12">
+        <a href="#"><i class="fa-3x fa fa-desktop" aria-hidden="true"></i></a>
+        <h2>Type your question  >></h2>
+        <h2>OR </h2>
+        <h2>Upload an image    </h2>
+      </div>
+      <div class="extra-div col-lg-4 col-md-4 col-12">
+        <a href="#"><i class="fa-3x fa fa-rocket" aria-hidden="true"></i></a>
+        <h2>Get your solution!</h2>
+      </div>
+    </div>
+  </div>
+    <div class="header-buttons">
+      <a href="#">Clarify your doubts now!!!</a>
+    </div>
+</section>
+
+
+<!--*********************************how it works ends************************************************************************-->
+
+<!--*********************************subjects starts************************************************************************-->
+
+<section class="header-extradiv">
+  <h1>EXPLORE THE SUBJECTS WITH US!!!</h1><br>
+  <div class="container">
+    <div class="row">
+      <div class="extra-div col-lg-3 col-md-3 col-12">
+        <a href="#"><i class="fa-3x fa fa-percent" aria-hidden="true"></i></a>
+        <h2>Mathematics</h2>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-12">
+        <a href="#"><i class="fa-3x fa fa-robot" aria-hidden="true"></i></a>
+        <h2>Physics</h2><br>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-12">
+        <a href="#"><i class="fa-3x fa fa-flask" aria-hidden="true"></i></a>
+        <h2>Chemistry</h2>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-12">
+        <a href="#"><i class="fa-3x fas fa-dna" aria-hidden="true"></i></a>
+        <h2>Biology</h2>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!--*********************************subjects ends************************************************************************-->
+<!--*********************************jee preparation ends***********************************************************************-->
+<section class="header-extradiv">
+  <h1>JEE MAINS & ADVANCED PREPARATION</h1><br>
+  <div class="container-min">
+    <img src="images/teach.jpeg">
+        <h2 >Micro concept videos</h2>
+        <p><h4>Find multilingual video explainations important and frequently confused concepts on every subjects.</h4></p>
+  </div>
+  <div class="header-buttons">
+    <a href="#">Prepare for JEE now</a>
+  </div>
+
+</section>
+
+<section class="header-extradiv">
+  <h1>NEET PREPARATION</h1><br>
+  <div class="container-min">
+    <img src="images/teach.jpeg">
+        <h2 >Micro concept videos</h2>
+        <p><h4>Find multilingual video explainations important and frequently confused concepts on every subjects.</h4></p>
+  </div>
+  <div class="header-buttons">
+    <a href="#">Prepare for NEET now</a>
+  </div>
+
+</section>
+<!--*********************************jee preparation ends***********************************************************************-->
+
+<!--*********************************access to books starts************************************************************************-->
+<section class="header-extradiv">
+  <h1>FREE EXCESS TO AROUND 5,000+ BOOKS</h1><br>
+  <h3><p>Get access to virtual library of 5000+ text books<br>
+  and reference books of various stateboards and compeititive exams.</p></h3><br>
+  <div class="container">
+    <div class="row">
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>H C VERMA</h2>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>NCERT</h2><br>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>KC Sinha</h2>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>Errorless</h2>
+      </div>
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>Tata McGraw Hill</h2>
+      </div>
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>R D Sharma</h2>
+      </div>
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>Pradeep's</h2>
+      </div>
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-book" aria-hidden="true"></i></a>
+        <h2>SL Arora</h2>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!--*********************************access to books ends***********************************************************************-->
+<!--*********************************state boards starts************************************************************************-->
+<section class="header-extradiv">
+  <h1>STATE BOARDS</h1><br>
+  <h4><p>Learn your board syllabus from the best teachers with us.</p></h4><br>
+  <div class="container">
+    <div class="row">
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>Maharashtra</h2>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>Punjab</h2><br>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>Andhra Pradesh</h2>
+      </div>
+
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>West Bengal</h2>
+      </div>
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>Kerala</h2>
+      </div>
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>Rajasthan</h2>
+      </div>
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>Gujrat</h2>
+      </div>
+      <div class="extra-div col-lg-3 col-md-3 col-20">
+        <a href="#"><i class="fa-3x fa fa-clipboard" aria-hidden="true"></i></a>
+        <h2>Tamil Nadu</h2>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+<!--*********************************state boards ends***********************************************************************-->
+<!--*********************************meet the team starts***********************************************************************-->
+<section class="header-extradiv">
+  <h1>MEET THE TEAM</h1>
+<div class="row">
+  <div class="column">
+    <div class="card">
+      <img src="images/jane.jpg" alt="Jane" style="width:100%">
+      <div class="container">
+        <h2>Jane Doe</h2>
+        <p class="title">CEO &amp; Founder</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="images/mike.jpg" alt="Mike" style="width:100%">
+      <div class="container">
+        <h2>Mike Ross</h2>
+        <p class="title">Art Director</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+
+  <div class="column">
+    <div class="card">
+      <img src="images/joe.jpg" alt="John" style="width:100%">
+      <div class="container">
+        <h2>John Doe</h2>
+        <p class="title">Designer</p>
+        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+        <p>example@example.com</p>
+        <p><button class="button">Contact</button></p>
+      </div>
+    </div>
+  </div>
+</div>
+<!--*********************************meet the team ends***********************************************************************-->
+<!--*********************************contact us starts***********************************************************************-->
+<section class="contactus" id="contactid">
+  <div class="container headings text-center">
+    <h1 class="text-center font-wight-bold">CONTACT US</h1>
+    <p class="text-capitalize pt-1">We're Here To Help And Answer Any Question You Might Have. We Look Forward To Hearing From You</p>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-8 col-md-8 col-10 offset-lg-2 offset-md-2 col-1">
+        <form action="contact.py" method="post">
+          <div class="form-group">
+            <input type="text" class="form-control" placeholder="Enter your name" name="username" id="username" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <input type="email" class="form-control" placeholder="Enter your email" name="email" id="email" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <input type="number" class="form-control" placeholder="Enter your phone number" name="number" id="mobile number" required autocomplete="off">
+          </div>
+          <div class="form-group">
+            <textarea class="form-control" rows="5" id="comment" name="thought" placeholder="Enter your thoughts"></textarea>
+          </div>
+          
+          <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!--*********************************contact us ends***********************************************************************-->
+<!--*********************************get the app starts***********************************************************************-->
+<section class="header-extradiv1">
+<div class="header-buttons">
+  <a href="#">GET THE APP</a>
+</div>
+</section>
+<!--*********************************get the app ends***********************************************************************-->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    </body>
+</html>
